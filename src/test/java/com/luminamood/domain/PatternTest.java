@@ -8,22 +8,22 @@ public class PatternTest {
 
     @Test
     public void testPattern(){
-        Pattern pattern = new Pattern(1, "pattern");
-        assert(pattern.getPatternId() == 1);
+        Pattern pattern = new Pattern("1", "pattern");
+        assert(pattern.getPatternId().equals("1"));
         assert(pattern.getPatternName().equals("pattern"));
-        pattern.setPatternId(2);
-        assert(pattern.getPatternId() == 2);
+        pattern.setPatternId("2");
+        assert(pattern.getPatternId().equals("2"));
         pattern.setPatternName("pattern2");
         assert(pattern.getPatternName().equals("pattern2"));
     }
     @Test
     public void testPatternFactory(){
         PatternFactory patternFactory = new PatternFactory();
-        Pattern pattern = patternFactory.createPattern(1, "pattern");
-        assert(pattern.getPatternId() == 1);
+        Pattern pattern = patternFactory.createPattern("1", "pattern");
+        assert(pattern.getPatternId().equals("1"));
         assert(pattern.getPatternName().equals("pattern"));
-        pattern.setPatternId(2);
-        assert(pattern.getPatternId() == 2);
+        pattern.setPatternId("2");
+        assert(pattern.getPatternId().equals("2"));
         pattern.setPatternName("pattern2");
         assert(pattern.getPatternName().equals("pattern2"));
     }
